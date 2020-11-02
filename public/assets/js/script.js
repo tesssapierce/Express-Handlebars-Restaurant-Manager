@@ -17,12 +17,14 @@ $(function(){
   
   $(".create-form").on("submit", function(event){
     event.preventDefault();
+    console.log("hi")
     var newBurger = $("#burg").val().trim()
     $.ajax("/api/burgers/", {
       type: "POST",
       data: {burger_name: newBurger}
     }).then(
       function() {
+        console.log("hi")
         location.reload();
       }
     )

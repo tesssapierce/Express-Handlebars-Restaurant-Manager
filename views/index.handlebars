@@ -1,22 +1,52 @@
-<h1>Burger Town</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <h3 class="burgerHead">Burgers available for eating</h3>
+      <ul>
 
-<h3>Have Some Burgs</h3>
+      {{#each burgers}}
+        {{#unless devoured}}
+          <li>
+            <img src="/assets/images/hamburger.png" class="img-fluid">
+            <p>{{this.burger_name}}</p>
+            <button class="devour" id={{this.id}}>Devour Me</button>
+          </li>
+        {{/unless}}
+      {{/each}}
 
-<ul>
-  {{#each burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Name: {{this.burger_name}}</p>
-       <button class="devour" id={{this.id}}>Devour Me</button>
-  	</li>
-  {{/each}}
-</ul>
+    </ul>
+        </div>
+        <div class="col-4">
+          <h3 class="burgerHead">Burgers that have been eaten</h3>
+            <ul>
 
-<h2>Add a new burger</h2>
-<form class="create-form">
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burg" name="name">
+            {{#each burgers}}
+              {{#if devoured}}
+                <li>
+                  <img src="/assets/images/hamburger.png" class="img-fluid">
+                  <p>{{this.burger_name}}</p>
+                  <button class="devour" id={{this.id}}>Devour Me</button>
+                </li>
+              {{/if}}
+            {{/each}}
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>Add a new burger</h3>
+        <form class="create-form">
+          <div class="form-group">
+            <label for="burger">Burger Name:</label>
+            <input type="text" id="burg" name="name">
+          </div>
+          <button type="submit" class="newBurg">Add Burger</button>
+        </form>
+    </div>
   </div>
-  <button type="submit" class="newBurg">Add Burger</button>
-</form>
+</div>

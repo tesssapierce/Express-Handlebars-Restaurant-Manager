@@ -6,7 +6,7 @@ const connection = require("./connection.js");
 //export
 var orm = {
   all: function(table, cb){
-    var queryString = "SELECT * FROM " + table + " WHERE devoured = 0;";
+    var queryString = "SELECT * FROM " + table + ";";
     connection.query(queryString,function(err,res){
       if (err) throw err;
       cb(res)

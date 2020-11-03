@@ -1,0 +1,34 @@
+body {
+  background-color: #fffced;
+  margin: 0 auto;
+}
+
+.logo {
+  background-color: #D0D0D0;
+  border: 2px #384859 solid;
+  text-align: center;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: 50px;
+}
+
+.logo-image {
+  width: 50px;
+}
+
+h1, h3 {
+  color: #384859;
+}
+
+ul {
+list-style: none
+}
+
+.burgerHead {
+  padding: 20px;
+  text-align: center;
+}
+
+.handlebar-body {
+  margin: 0 auto;
+}

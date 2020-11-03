@@ -9,7 +9,8 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 25px;
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
 .logo-image {
@@ -18,28 +19,21 @@ body {
 
 h1, h3 {
   color: #384859;
+  text-align:  center;
 }
 
 ul {
-list-style: none
-}
-
-.burgerHead {
-  padding: 20px;
-  text-align: center;
-}
-
-.handlebar-body {
-  margin: 0 auto;
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .burgerList {
   background-color: #D0D0D0;
   border: 2px #384859 solid;
-  text-align: center;
-  padding: 20px;
   border-radius: 25px;
   margin: 20px auto;
+  text-align: center;
 }
 
 .addBurger {
@@ -49,4 +43,17 @@ list-style: none
   padding: 20px;
   border-radius: 25px;
   margin: 20px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .burgerHead {
+    margin-top: 20px;
+    width: 50%;
+    font-size: 20px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 }

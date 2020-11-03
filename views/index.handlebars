@@ -9,7 +9,7 @@
           <li>
             <img src="/assets/images/hamburger.png" class="img-fluid">
             <p>{{this.burger_name}}</p>
-            <button class="devour" id={{this.id}}>Devour Me</button>
+            <button class="devour btn btn-secondary" id={{this.id}}>Devour Me</button>
           </li>
         {{/unless}}
       {{/each}}
@@ -25,7 +25,7 @@
                 <li>
                   <img src="/assets/images/hamburger.png" class="img-fluid">
                   <p>{{this.burger_name}}</p>
-                  <button class="delete" id={{this.id}}>Delete</button>
+                  <button class="delete btn btn-secondary" id={{this.id}}>Delete</button>
                 </li>
               {{/if}}
             {{/each}}
@@ -45,7 +45,7 @@
             <label for="burger">Burger Name:</label>
             <input type="text" id="burg" name="name">
           </div>
-          <button type="submit" class="newBurg">Add Burger</button>
+          <button type="submit" class="newBurg btn btn-secondary">Add Burger</button>
         </form>
     </div>
   </div>

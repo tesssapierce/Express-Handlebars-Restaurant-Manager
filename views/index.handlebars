@@ -18,14 +18,14 @@
         </div>
         <div class="col-4 burgerList">
           <h3 class="burgerHead">Devoured Burgers</h3>
-            <ul>
+            <ul>  
 
             {{#each burgers}}
               {{#if devoured}}
                 <li>
                   <img src="/assets/images/hamburger.png" class="img-fluid">
                   <p>{{this.burger_name}}</p>
-                  <button class="delete btn btn-secondary" id={{this.id}}>Delete</button>
+                  <button class="delete btn btn-secondary" id={{this.id}}>Digest Me</button>
                 </li>
               {{/if}}
             {{/each}}

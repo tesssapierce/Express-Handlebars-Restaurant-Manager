@@ -9,13 +9,18 @@ var burgers = {
       cb(res)
     });
   },
-  delete: function(val, cb) {
-    orm.delete("burgers", val, function(res) {
+  update: function(val, cb) {
+    orm.update("burgers", val, function(res) {
       cb(res)
     });
   },
   create: function(val, cb) {
     orm.create("burgers", val, function(res) {
+      cb(res)
+    });
+  },
+  delete: function(val, cb) {
+    orm.delete("burgers", val, function(res) {
       cb(res)
     });
   }

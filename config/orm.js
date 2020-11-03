@@ -12,7 +12,7 @@ var orm = {
       cb(res)
     })
   },
-  delete: function(table, val, cb){
+  update: function(table, val, cb){
     var queryString = "UPDATE " + table + " SET ? WHERE ?"
     connection.query(queryString, [{devoured: true}, {id: val}], function(err,res){
       if (err) throw err;
@@ -22,6 +22,13 @@ var orm = {
     create: function(table, val, cb){
     var queryString = "INSERT INTO " + table + " SET ?";
     connection.query(queryString,{burger_name: val, devoured:false}, function(err, res) {
+      if (err) throw err;
+      cb(res)
+    })
+  },
+  delete: function(table, val, cb){
+    var queryString = "DELETE FROM " + table + " WHERE ?"
+    connection.query(queryString, {id: val}, function(err,res){
       if (err) throw err;
       cb(res)
     })

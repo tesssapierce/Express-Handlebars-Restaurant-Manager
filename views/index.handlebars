@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container handlebar-body align-center">
   <div class="row">
-    <div class="col-4">
+    <div class="col-4 burgerList">
       <h3 class="burgerHead">Burgers available for eating</h3>
       <ul>
 
@@ -16,7 +16,7 @@
 
     </ul>
         </div>
-        <div class="col-4">
+        <div class="col-4 burgerList">
           <h3 class="burgerHead">Burgers that have been eaten</h3>
             <ul>
 
@@ -25,7 +25,7 @@
                 <li>
                   <img src="/assets/images/hamburger.png" class="img-fluid">
                   <p>{{this.burger_name}}</p>
-                  <button class="devour" id={{this.id}}>Devour Me</button>
+                  <button class="delete" id={{this.id}}>Delete</button>
                 </li>
               {{/if}}
             {{/each}}
@@ -38,7 +38,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12">
+    <div class="col-10 addBurger">
       <h3>Add a new burger</h3>
         <form class="create-form">
           <div class="form-group">

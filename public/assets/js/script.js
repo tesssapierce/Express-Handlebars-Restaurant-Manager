@@ -7,24 +7,31 @@ $(function(){
   $(".devour").on("click", function(event){
     var id = $(this).attr("id")
     $.ajax("/api/burgers/" + id, {
+      type: "POST",
+      data: id
+    }).then(function(){
+      location.reload();
+    })
+  })
+
+  $(".delete").on("click", function(event){
+    var id = $(this).attr("id")
+    $.ajax("/api/burgers/" + id, {
       type: "DELETE",
       data: id
     }).then(function(){
-      console.log("Removed burger with ID of " + id)
       location.reload();
     })
   })
   
   $(".create-form").on("submit", function(event){
     event.preventDefault();
-    console.log("hi")
     var newBurger = $("#burg").val().trim()
     $.ajax("/api/burgers/", {
       type: "POST",
       data: {burger_name: newBurger}
     }).then(
       function() {
-        console.log("hi")
         location.reload();
       }
     )

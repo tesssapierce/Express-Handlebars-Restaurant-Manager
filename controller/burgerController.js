@@ -10,13 +10,10 @@ router.get("/", function(req,res){
   });
 });
 
-router.delete("/api/burgers/:id", function(req,res){
+router.post("/api/burgers/:id", function(req,res){
   var id = req.params.id
   console.log(id)
-  burger.delete(id, function(result){
-    if (result.changedRows === 0) {
-      return res.status(404).end();
-    }
+  burger.update(id, function(result){
     res.status(200).end()
   })
 })
@@ -28,5 +25,13 @@ router.post("/api/burgers", function(req, res) {
     res.status(200).end()
   });
 });
+
+router.delete("/api/burgers/:id", function(req,res){
+  var id = req.params.id
+  console.log(id)
+  burger.delete(id, function(result){
+    res.status(200).end()
+  })
+})
 
 module.exports = router ;
